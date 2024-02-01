@@ -5,7 +5,7 @@ import random
 import numpy as np
 import torch
 from cvxopt import matrix, solvers, spmatrix
-from ortools.graph import pywrapgraph
+from ortools.graph.python.min_cost_flow import SimpleMinCostFlow    #hs 20240105
 
 from dev_misc import Map
 
@@ -82,11 +82,11 @@ def min_cost_flow(dists, demand, n_similar=None, capacity=1):
     supplies = [demand, -demand]  # + [0] * (nt + ns)
 
     # Instantiate a SimpleMinCostFlow solver.
-    min_cost_flow = pywrapgraph.SimpleMinCostFlow()
+    min_cost_flow = SimpleMinCostFlow()                         #hs20240105
 
     # Add each arc.
     for i in range(0, len(start_nodes)):
-        min_cost_flow.AddArcWithCapacityAndUnitCost(
+        min_cost_flow.add_arc_with_capacity_and_unit_cost(      #hs20240105
             int(start_nodes[i]),
             int(end_nodes[i]),
             int(capacities[i]),
@@ -94,17 +94,17 @@ def min_cost_flow(dists, demand, n_similar=None, capacity=1):
 
     # Add node supplies.
     for i in range(0, len(supplies)):
-        min_cost_flow.SetNodeSupply(i, supplies[i])
+        min_cost_flow.set_node_supply(i, supplies[i])           #hs20240105
 
     # Find the minimum cost flow between node 0 and node 4.
-    if min_cost_flow.Solve() == min_cost_flow.OPTIMAL:
-        cost = min_cost_flow.OptimalCost()
+    if min_cost_flow.solve() == min_cost_flow.OPTIMAL:          #hs20240105
+        cost = min_cost_flow.optimal_cost()                     #hs20240105
         flow = np.zeros([nt, ns])
-        for i in range(min_cost_flow.NumArcs()):
-            t = min_cost_flow.Tail(i)
-            s = min_cost_flow.Head(i)
+        for i in range(min_cost_flow.num_arcs()):               #hs20240105
+            t = min_cost_flow.tail(i)                           #hs20240105
+            s = min_cost_flow.head(i)                           #hs20240105
             if t > 1 and s > 1 + nt:
-                flow[t - 2, s - 2 - nt] = min_cost_flow.Flow(i)
+                flow[t - 2, s - 2 - nt] = min_cost_flow.flow(i) #hs20240105 
         return flow, cost
     else:
         logging.error('There was an issue with the min cost flow input.')
