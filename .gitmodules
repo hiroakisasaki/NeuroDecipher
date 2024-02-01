@@ -1,0 +1,6 @@
+[submodule "dev_misc"]
+	path = dev_misc
+	url = https://github.com/hiroakisasaki/dev_misc.git
+[submodule "arglib"]
+	path = arglib
+	url = https://github.com/hiroakisasaki/arglib.git
