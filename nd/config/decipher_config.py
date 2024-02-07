@@ -39,4 +39,4 @@ class KorWuu:                                                                   
     capacity: int = 3
     dropout: float = 0.3
     warm_up_steps: int = 5
-    gpu: int = 0            
+    #gpu: int = 0                                                                                       # hs 20240207 kagayaki            
