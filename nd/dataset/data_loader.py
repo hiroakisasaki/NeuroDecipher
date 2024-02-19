@@ -53,7 +53,7 @@ class VocabDataset(WordlistDataset):
 
 
 def _get_item(key, batch):
-    return np.asarray([record[key] for record in batch])
+    return np.asarray([record[key] for record in batch], dtype=object)      # hs 20240219 colab numpy==1.25.2
 
 
 def collate_fn(batch):
