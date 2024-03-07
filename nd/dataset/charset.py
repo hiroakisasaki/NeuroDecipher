@@ -213,26 +213,50 @@ class HebCharSetNoSpe(BaseCharset):
     _FEATURES = ['']
 
 
-@register_charset('uga-no_spe')
+@register_charset('uga-no_spe')                                     
 class UgaCharSetNoSpe(BaseCharset):
 
     _CHARS = u'$&*<@HSTZabdghiklmnpqrstuvwxyz'
     _FEATURES = ['']
 
 
-@register_charset('kor')
+#@register_charset('kor')                                                            # hs 20240129
+#class KorCharSetNoSpe(BaseCharset):
+
+#    _CHARS = u'가각간갈감갑값갓강개객갱갹거건걸검겁겉게격견결겸경곁계고곡곤골곰곳공과곽관괄광괘괴괵굉교구국군굴굿궁권궐궤귀규균귤극근글금급긍기긱긴길김깃껏꼴꽃끈끌나낙난날남납낭내냥널네녀년녈념녕노논놈농뇌뇨눈눌뉴뉵능늪니닉님다단달담답당대댁덕덩도독돈돌동되두둑둔득들등딸때떡떼뜀뜰띠라락란랄람랍랑래랭략량려력련렬렴렵령례로록론롱뢰료룡루류륙륜률륭르륵름릉리린림립마막만말맛망매맥맹먹메멱면멸명모목몰못몽묘무묵문물미민밀밑바박반발밤밥방밭배백번벌범법벽변별병보복본봉부북분불붓붕비빈빗빙빛뼈뿔사삭산살삼삽상새색생서석선설섬섭성섶세셈소속손솔솜송솥쇄쇠수숙순술숭숲슬습승시식신실심십쌀쌈쌍쑤씨아악안알암압앙애액앵야약양어억언얼엄업에여역연열염엽영예오옥온올옷옹와완왈왕왜외요욕용우욱운울웅원월위유육윤융은을음읍응의이익인일임입잉잎자작잔잠잡장재쟁저적전절점접젓정젖제조족존졸좀종좌좨죄주죽준줄중쥐즉즐즙증지직진질짐집짓징짜짝쪽찜차착찬찰참창채책처척천철첨첩청체초촉촌총촬최추축춘출춤충췌취측츤츰층치칙친칠침칩칭칸칼코콩쾌타탁탄탈탐탑탕태택탱터턱털테토통퇴투특튼틀틈파판팔패팽퍅페편폄평포폭표푼풀품풍피필핍하학한할함합항해핵행향허헌헐험혀혁현혈혐협형혜호혹혼홀홈홍화확환활황회획횡효후훈훙훤훼휘휴휼흉흑흔흘흙흠흡흥희히힐힘'
+#    _FEATURES = ['']
+
+
+#@register_charset('wuu')                                                            # hs 20240129
+#class WuuCharSetNoSpe(BaseCharset):
+
+#    _CHARS = u'abdefghijklmnopqrstuvxyz'
+#    _FEATURES = ['']
+
+@register_charset('kor')                                                            # hs 20240307 IPA for kor
 class KorCharSetNoSpe(BaseCharset):
 
-    _CHARS = u'가각간갈감갑값갓강개객갱갹거건걸검겁겉게격견결겸경곁계고곡곤골곰곳공과곽관괄광괘괴괵굉교구국군굴굿궁권궐궤귀규균귤극근글금급긍기긱긴길김깃껏꼴꽃끈끌나낙난날남납낭내냥널네녀년녈념녕노논놈농뇌뇨눈눌뉴뉵능늪니닉님다단달담답당대댁덕덩도독돈돌동되두둑둔득들등딸때떡떼뜀뜰띠라락란랄람랍랑래랭략량려력련렬렴렵령례로록론롱뢰료룡루류륙륜률륭르륵름릉리린림립마막만말맛망매맥맹먹메멱면멸명모목몰못몽묘무묵문물미민밀밑바박반발밤밥방밭배백번벌범법벽변별병보복본봉부북분불붓붕비빈빗빙빛뼈뿔사삭산살삼삽상새색생서석선설섬섭성섶세셈소속손솔솜송솥쇄쇠수숙순술숭숲슬습승시식신실심십쌀쌈쌍쑤씨아악안알암압앙애액앵야약양어억언얼엄업에여역연열염엽영예오옥온올옷옹와완왈왕왜외요욕용우욱운울웅원월위유육윤융은을음읍응의이익인일임입잉잎자작잔잠잡장재쟁저적전절점접젓정젖제조족존졸좀종좌좨죄주죽준줄중쥐즉즐즙증지직진질짐집짓징짜짝쪽찜차착찬찰참창채책처척천철첨첩청체초촉촌총촬최추축춘출춤충췌취측츤츰층치칙친칠침칩칭칸칼코콩쾌타탁탄탈탐탑탕태택탱터턱털테토통퇴투특튼틀틈파판팔패팽퍅페편폄평포폭표푼풀품풍피필핍하학한할함합항해핵행향허헌헐험혀혁현혈혐협형혜호혹혼홀홈홍화확환활황회획횡효후훈훙훤훼휘휴휼흉흑흔흘흙흠흡흥희히힐힘'
+    _CHARS = u'*abdhijklmnopstuwŋɑɕɛɡɯɰɾʌʑʰ'
     _FEATURES = ['']
 
 
-@register_charset('wuu')
+@register_charset('wuu')                                                            # hs 20240307 IPA for wuu
 class WuuCharSetNoSpe(BaseCharset):
 
-    _CHARS = u'abdefghijklmnopqrstuvxyz'
+    _CHARS = u'abdefhiklmnopstvyzãøŋɑɔɕəɜɡɥɦɪɯɲɻʊʏʑʔʰʲʷ̞̠̥̩̯̱̃̊̍͡'
     _FEATURES = ['']
 
+@register_charset('OC')                                                             # hs 20240307
+class OCCharSet(BaseCharset):
+
+    _CHARS = u'ACNSabdeghijklmnopqrstuwz|ŋəɢɦʔʰʷˤ̥̊ә'
+    _FEATURES = ['']
+
+@register_charset('MC')                                                             # hs 20240307
+class MCCharSet(BaseCharset):
+
+    _CHARS = u'+abdeghijklmnoprstuwxyz'
+    _FEATURES = ['']
 
 @register_charset('el')
 class ElCharSet(BaseCharset):
