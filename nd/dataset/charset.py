@@ -249,7 +249,7 @@ class WuuCharSetNoSpe(BaseCharset):
 @register_charset('OC')                                                             # hs 20240307
 class OCCharSet(BaseCharset):
 
-    _CHARS = u'ACNSabdeghijklmnopqrstuwz|ŋəɢɦʔʰʷˤ̥̊ә'
+    _CHARS = u'ACNSabdeghijklmnopqrstuwz|ŋəɢɦʔʰʷˤr̥l̥n̥'                               # hs 20240310
     _FEATURES = ['']
 
 @register_charset('MC')                                                             # hs 20240307
