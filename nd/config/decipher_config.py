@@ -24,12 +24,12 @@ class UgaHebSmallNoSpe:
     #gpu: int = 0                                                                                        # hs 20240109 #kagayaki
 
 @register
-class KorWuu:                                                                                           # hs 20240129
+class KorWuu:                                                                                           # hs 20240319
     lost_lang: str = 'kor'
     known_lang: str = 'wuu'
-    #cog_path: str = '/home/s2230007/venv/python3.7/root/NeuroDecipher/data/cognate.txt'                # hs 20240129 kagayaki
-    cog_path: str = 'data/cognate.txt'                                                                  # hs 20240129 colab
-    num_cognates: int = 220
+    #cog_path: str = '/home/s2230007/venv/python3.7/root/NeuroDecipher/data/KorWuu.txt'                 # hs 20240319 kagayaki
+    cog_path: str = 'data/KorWuu.txt'                                                                   # hs 20240319 colab
+    num_cognates: int = 221
     num_epochs_per_M_step: int = 150
     eval_interval: int = 10
     check_interval: int = 10
